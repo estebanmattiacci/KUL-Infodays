@@ -9,7 +9,7 @@ This website aims to improve organization and effectiveness of the information d
 
 ***REMOVED******REMOVED*** Features
 
-- **Student Registration**: Allows students to register for upcoming KU Leuven Information Days, ensuring they receive all the necessary information and updates about the events.
+- **Student secure Registration & Login**: Allows students to register for upcoming KU Leuven Information Days, ensuring they receive all the necessary information and updates about the events. After registration the student will receive an email for confirmation (configured with [Mailtrap](https://mailtrap.io/?gad_source=1&gclid=CjwKCAjw7-SvBhB6EiwAwYdCAcXoAXYzh32WoOuzIfyrV9mNY6w-Wt-Z4vLDWf04N2XMzZ3hGGpjLhoCO6MQAvD_BwE). Once he confirms his email, he will be able to login using his identifiers.  
 
 - **Feedback Submission**: After attending the information days, students can submit their feedback through the website. This feature aims to collect valuable insights from attendees to improve future infodays and help other students make their choice.
 
