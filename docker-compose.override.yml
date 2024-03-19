@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+***REMOVED******REMOVED******REMOVED***> doctrine/doctrine-bundle ***REMOVED******REMOVED******REMOVED***
+  database:
+    ports:
+      - "5432"
+***REMOVED******REMOVED******REMOVED***< doctrine/doctrine-bundle ***REMOVED******REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***> symfony/mailer ***REMOVED******REMOVED******REMOVED***
+  mailer:
+    image: schickling/mailcatcher
+    ports: ["1025", "1080"]
+***REMOVED******REMOVED******REMOVED***< symfony/mailer ***REMOVED******REMOVED******REMOVED***

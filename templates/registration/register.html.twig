@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Register{% endblock %}</title>
+    <link rel="icon" type="x-icon" href="https://stijl.kuleuven.be/releases/ttt/img/favicon.png">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+{***REMOVED***<a class="header-link" href="{{ path('home') }}">
+<header>
+    <img src="https://stijl.kuleuven.be/releases/ttt/img/logo.png" alt="KU Leuven">
+    <h1>Info Days</h1>
+</header>
+</a>***REMOVED***}
+{% block body %}
+
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+    <div class="register-form">
+    <h1>Register</h1>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.firstname) }}
+        {{ form_row(registrationForm.lastname) }}
+        {{ form_row(registrationForm.birthday) }}
+        {{ form_row(registrationForm.infoday) }}
+        {{ form_row(registrationForm.email) }}
+
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+
+        <div class="checkbox-div">
+        {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+
+        <button type="submit" class="btn-primary">Register</button>
+    {{ form_end(registrationForm) }}
+
+    <p>Do you already have an account?</p>
+    <a href="{{ path('app_login') }}">Login here</a>
+    </div>
+{% endblock %}
+</body>
+</html>

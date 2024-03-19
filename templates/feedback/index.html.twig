@@ -1,0 +1,19 @@
+{% extends 'base_template/base.html.twig' %}
+
+{% block body %}
+
+<div class="feedback-form">
+    <h3>You are registered for the infoday on the {{ app.user.infoday }}. </h3>
+    {{ form_errors(feedbackForm) }}
+
+    {{ form_start(feedbackForm)}}
+    {{ form_row(feedbackForm.interests) }}
+    {{ form_row(feedbackForm.rating) }}
+    {{ form_row(feedbackForm.comment) }}
+
+    <button type="submit"  class="btn btn-primary">Submit</button>
+    {{ form_end(feedbackForm)}}
+
+</div>
+
+{% endblock %}

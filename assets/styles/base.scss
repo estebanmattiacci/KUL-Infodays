@@ -1,0 +1,134 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+    background-color: ghostwhite;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header h1 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /* make nav take the available space */
+    flex-grow: 1;
+    margin-left:50px
+}
+
+
+nav ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+
+}
+nav ul li {
+    padding: 20px;
+    font-size: 27px;
+    float: left;
+    
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.auth {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdowno .dropbtn {
+    font-size: inherit;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: ***REMOVED***f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: ***REMOVED***e86262;
+}
+
+/* Show the dropdown menu on hover */
+.dropdowno:hover .dropdown-content {
+    display: block;
+}
+
+.log {
+    background-color: ***REMOVED***10a410;
+}
+
+footer {
+    min-height: 50px;
+    background-color: ***REMOVED***656565;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    margin: 50px;
+    //position: relative;
+    flex: 1;
+}
+main li {
+    list-style-type: none;
+    font-weight: bold;
+}
+main p {
+    /* make the text end at the same place each line when possible */
+    text-align: justify;
+}
+main h3 {
+    font-weight: lighter;
+}
+
+***REMOVED***page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+***REMOVED***content-wrap {
+    padding-bottom: 12.5rem;    /* Footer height */
+}

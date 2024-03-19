@@ -1,0 +1,13 @@
+framework:
+    default_locale: en
+    translator:
+        default_path: '%kernel.project_dir%/translations'
+        fallbacks:
+            - en
+***REMOVED***        providers:
+***REMOVED***            crowdin:
+***REMOVED***                dsn: '%env(CROWDIN_DSN)%'
+***REMOVED***            loco:
+***REMOVED***                dsn: '%env(LOCO_DSN)%'
+***REMOVED***            lokalise:
+***REMOVED***                dsn: '%env(LOKALISE_DSN)%'

@@ -1,0 +1,54 @@
+{% extends 'base_template/base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('profile') }}
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('profile') }}
+{% endblock %}
+{% block body %}
+
+    <div class="container">
+        <h2 class="name"> {{ app.user.firstname }} {{ app.user.lastname }}</h2>
+
+        <p> Registered for the infoday on the <b>{{ app.user.infoday }}</b> with <b>{{ app.user.email }}</b>. </p>
+        {% set feedback = app.user.feedback %}
+        {% if feedback  %}
+            <p>Your feedback:</p>
+
+            <div class="feedback">
+                <div class="feedback-header">
+                    <div class="feedback-user">{{ feedback.user.username }}</div>
+                    <div class="feedback-date"> Visited the {{ feedback.user.infoday}}</div>
+                </div>
+                <div class="feedback-content">
+                    <div class="rating">
+                        {% set rating = feedback.rating %}
+                        {% for i in 1..5 %}
+                            {% if i <= rating %}
+                                <img src="{{ asset('build/images/Gold_Star.svg.png') }}" alt="Gold Star" width="20" height="20">
+                            {% else %}
+                                <img src="{{ asset('build/images/Empty_Star.png') }}" alt="Empty Star" width="20" height="20">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="interests">
+                        {% if feedback.interests is empty %}
+                            <p>This person did not select any interests.</p>
+                        {% else %}
+                            {% for interest in feedback.interests %}
+                                {{ interest.name }}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="comment-author">
+                        <div class="comment"> "{{ feedback.comment }}"</div>
+                        <div class="author"> - {{ feedback.user.firstname}} {{ feedback.user.lastname }} </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p class="secondary">You haven't submitted a feedback yet. Please do so after going to your Infoday!</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid ***REMOVED***ccc;
+  border-radius: 10px;
+  background-color: ***REMOVED***ffffff;
+
+}
+.feedback-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.feedback-user {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 5px;
+
+}
+.feedback-date {
+  font-size: 12px;
+  font-style: italic;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.rating img{
+  width: 22px;
+  height: auto;
+  margin: 3px;
+}
+.interests {
+  margin: 5px;
+  padding: 5px;
+  p {
+    color : grey;
+    font-style: italic;
+
+  }
+}
+
+.comment-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment {
+  margin: 5px;
+  padding: 5px;
+}
+.author {
+  text-transform: capitalize;
+}
+.secondary {
+  margin-top: 50px;
+  font-size: 27px;
+  color: grey;
+  font-style: italic;
+}

@@ -1,0 +1,32 @@
+{% extends 'base_template/base.html.twig' %}
+
+{% block stylesheets %}
+{{ encore_entry_link_tags('statistics') }}
+{% endblock %}
+
+{% block javascripts %}
+{{ encore_entry_script_tags('statistics') }}
+{% endblock %}
+
+
+{% block body %}
+<button class="btn btn-primary" onclick="window.location.href = '{{ path('app_feedbacks') }}'">Feedbacks</button>
+    <br><br>
+    <h1>Website Statistics</h1>
+
+
+    <div class="pie-chart2">
+        {{ render_chart(chart2) }}
+    </div>
+
+    <div class="bar-chart">
+        {{ render_chart(chart) }}
+    </div>
+
+
+
+    <div class="bar-chart3">
+        {{ render_chart(chart3) }}
+    </div>
+
+{% endblock %}

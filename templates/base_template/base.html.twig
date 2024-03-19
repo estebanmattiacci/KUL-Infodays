@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}KUL Info Days{% endblock %}</title>
+        <link rel="icon" type="x-icon" href="{{ asset('build/images/favicon.png') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('base') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('base') }}
+        {% endblock %}
+    </head>
+
+    <body>
+    <div id="page-container">
+        <div id="content-wrap">
+        <header>
+            <div class="logo-title">
+            <img src="https://stijl.kuleuven.be/releases/ttt/img/logo.png" alt="KU Leuven">
+            <h1>Info Days</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('home') }}">Home</a></li>
+                    <li><a href=" {{  path('app_feedback') }}">Feedback</a></li>
+                    <li><a href="{{ path('app_contact') }} ">Contact</a></li>
+                    <li><a href="{{ path('app_feedbacks') }} ">Overview</a></li>
+                    {% if is_granted('IS_AUTHENTICATED') %}
+                        {***REMOVED*** This user entered their credentials THIS session ***REMOVED***}
+                        <li class="auth dropdowno">
+                            <button class="dropbtn">{{ app.user.username}} <i class="bi bi-caret-down-fill"></i>  </button>
+                            <div class="dropdown-content">
+                                <a href="{{ path('app_profile') }}">Profile</a>
+                                <a href="{{ path('app_logout') }}">Log out</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        {***REMOVED*** This is a `guest`  ***REMOVED***}
+                        <li class="auth log"><a href="  {{ path('app_login') }} ">Login</a></li>
+                        <li class="auth reg"><a href="  {{ path('app_register') }} ">Register </a></li>
+
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+        {% block body %}
+           <h3>Welcome to the Registration Website for the Group T information days!<br>
+
+               We are thrilled to have you here to register for our upcoming Infodays. Below are the friendly instructions to guide you through the process:</h3>
+                <br><br>
+                <li>Step 1: Registration</li>
+
+                <p>Click on the "Register" button to begin the process.
+                    Fill in your personal details, <b>ensuring that your email address you choose is accurate. You won't be able to change it after registration. </b></p>
+
+                <li>Step 2: Choosing Your Infoday Date</li>
+
+            <p>During registration, you will find three dates to choose from: <span class="badge bg-secondary">25/05/2023 </span>, <span class="badge bg-secondary"> 24/06/2023 </span>, or <span class="badge bg-secondary">02/09/2023</span>.
+                    Pick the date that best suits your schedule and click on it to confirm your attendance. Don't worry, you can only choose one date for now.</p>
+
+            <li>Step 3: Attending the Infoday</li>
+
+                    <p>On the chosen date, make sure to attend the Infoday at Ku Leuven University and get ready to explore an enriching experience!
+                        Feel free to speak with our staff and current students to gather all the information you need.</p>
+
+                    <li> Step 4: Submitting Feedback</li>
+
+                    <p>After attending the Infoday, you have the option to provide us with valuable feedback on your experience.
+                    Simply log in to your account on the website and navigate to the "Feedback" section.
+                    Share your thoughts, suggestions, and comments to help us improve our Infodays further. Your feedback is highly appreciated!<br><br>
+                    That's it! You are all set to make the most of your time at Ku Leuven University. If you have any questions or need assistance, feel free to contact our friendly support team.
+                        We look forward to welcoming you on our Infodays and helping you explore the exciting opportunities that await you at Ku Leuven University!</p>
+
+
+        {% endblock %}
+        </main>
+        </div>
+
+        <footer>
+            <p><b>Disclaimer:</b><br>
+                This website is for informational purposes only. While we strive to provide accurate and up-to-date information, please note that details regarding Infodays and programs are subject to change.
+                <br>For the most current information, kindly refer to the official Ku Leuven University website.<br><br>
+                <b>Copyright © 2023 Ku Leuven University. All rights reserved.</b></p>
+        </footer>
+    </div>
+    </body>
+</html>

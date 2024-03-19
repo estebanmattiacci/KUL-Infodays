@@ -1,0 +1,98 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+    background-color: ghostwhite;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.register-form{
+    /* register form in the middle, with a border and all elements of the form well spaced */
+    border: 1px solid ***REMOVED***ccc;
+    width: 500px;
+    margin: 50px auto;
+    padding: 50px;
+    /* items in the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* rounded corners, different background color */
+    border-radius: 10px;
+    background-color: ***REMOVED***ffffff;
+}
+/* how to identify a form element with the name registration_form */
+form[name=registration_form]{
+    /* form elements are stacked on top of each other */
+    display: flex;
+    flex-direction: column;
+    /* how to add space between the label of the input and the input that are on the same row */
+    margin-bottom: 15px;
+}
+/* multiple div elements inside the form. How can I add space between them? */
+form[name=registration_form] div{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+
+}
+
+form[name=registration_form] div label{
+    /* how to add space between the label of the input and the input that are on the same row */
+    margin-right: 8px;
+}
+
+
+
+.btn-primary{
+    /* style the button into a primary button similar to primary buttons in bootstrap */
+    background-color: ***REMOVED***007bff;
+    color: ***REMOVED***ffffff;
+    /* rounded corners */
+    border-radius: 5px;
+    /* make button more visible by increasing size */
+    padding: 10px 20px;
+    font-size: 16px;
+    /* remove the default border */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-form-content{
+    border: 1px solid ***REMOVED***ccc;
+    width: 500px;
+    margin: 50px auto;
+    padding: 50px;
+    /* items in the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* rounded corners, different background color */
+    border-radius: 10px;
+    background-color: ***REMOVED***ffffff;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.logbtn {
+    margin-top: 25px;
+}
+.p-text {
+    text-align: center;
+}
+
+a.header-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the anchor fill the header space */
+}

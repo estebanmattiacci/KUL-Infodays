@@ -1,0 +1,13 @@
+{% extends 'registration/register.html.twig' %}
+
+{% block title %}Verify{% endblock %}
+
+{% block body %}
+
+
+    <div>
+        <h1>Please verify your account by clicking on the link that was sent to you by email.</h1>
+    </div>
+    <a href="{{ path('app_logout') }}">Log out here</a>
+{% endblock %}
+
