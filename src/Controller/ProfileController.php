@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProfileController extends AbstractController
 {
 
-    ***REMOVED***[Route('/profile', name: 'app_profile')]
+    #[Route('/profile', name: 'app_profile')]
     public function index(Request $request,EntityManagerInterface $entityManager): Response
     {
         $this->denyAccessUnlessGranted("IS_AUTHENTICATED");

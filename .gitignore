@@ -1,31 +1,31 @@
 
-***REMOVED******REMOVED******REMOVED***> symfony/framework-bundle ***REMOVED******REMOVED******REMOVED***
+###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
-/.env ***REMOVED*** remove to avoid defining environment variables in production
+/.env # remove to avoid defining environment variables in production
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
-***REMOVED******REMOVED******REMOVED***< symfony/framework-bundle ***REMOVED******REMOVED******REMOVED***
+###< symfony/framework-bundle ###
 
-***REMOVED******REMOVED******REMOVED***> phpunit/phpunit ***REMOVED******REMOVED******REMOVED***
+###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
-***REMOVED******REMOVED******REMOVED***< phpunit/phpunit ***REMOVED******REMOVED******REMOVED***
+###< phpunit/phpunit ###
 
-***REMOVED******REMOVED******REMOVED***> symfony/phpunit-bridge ***REMOVED******REMOVED******REMOVED***
+###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
-***REMOVED******REMOVED******REMOVED***< symfony/phpunit-bridge ***REMOVED******REMOVED******REMOVED***
+###< symfony/phpunit-bridge ###
 
-***REMOVED******REMOVED******REMOVED***> symfony/webpack-encore-bundle ***REMOVED******REMOVED******REMOVED***
+###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
 npm-debug.log
 yarn-error.log
-***REMOVED******REMOVED******REMOVED***< symfony/webpack-encore-bundle ***REMOVED******REMOVED******REMOVED***
+###< symfony/webpack-encore-bundle ###
 
-***REMOVED******REMOVED******REMOVED*** node js***REMOVED******REMOVED******REMOVED***
+### node js###
 /node_modules

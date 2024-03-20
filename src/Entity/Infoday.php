@@ -9,21 +9,21 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-***REMOVED***[ORM\Entity(repositoryClass: InfodayRepository::class)]
+#[ORM\Entity(repositoryClass: InfodayRepository::class)]
 class Infoday
 {
-    ***REMOVED***[ORM\Id]
-    ***REMOVED***[ORM\GeneratedValue]
-    ***REMOVED***[ORM\Column]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
     private ?int $id = null;
 
-    ***REMOVED***[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
-    ***REMOVED***[ORM\OneToMany(mappedBy: 'infoday', targetEntity: User::class)]
+    #[ORM\OneToMany(mappedBy: 'infoday', targetEntity: User::class)]
     private Collection $users;
 
-    /****REMOVED***[ORM\OneToMany(mappedBy: 'datevisited', targetEntity: Feedback::class)]
+    /*#[ORM\OneToMany(mappedBy: 'datevisited', targetEntity: Feedback::class)]
     private Collection $feedback;*/
 
     public function __construct()

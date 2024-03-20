@@ -10,28 +10,28 @@ use Doctrine\ORM\Mapping as ORM;
 use phpDocumentor\Reflection\Types\Integer;
 use Symfony\Component\Validator\Constraints\DateTime;
 
-***REMOVED***[ORM\Entity(repositoryClass: FeedbackRepository::class)]
+#[ORM\Entity(repositoryClass: FeedbackRepository::class)]
 class Feedback
 {
-    ***REMOVED***[ORM\Id]
-    ***REMOVED***[ORM\GeneratedValue]
-    ***REMOVED***[ORM\Column]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
     private ?int $id = null;
 
-    /****REMOVED***[ORM\ManyToOne(targetEntity: Infoday::class, inversedBy: 'feedback'),ORM\JoinColumn(nullable: false)]
+    /*#[ORM\ManyToOne(targetEntity: Infoday::class, inversedBy: 'feedback'),ORM\JoinColumn(nullable: false)]
     private $datevisited = null;*/
 
-    ***REMOVED***[ORM\Column]
+    #[ORM\Column]
     private ?int $rating = null;
 
-    ***REMOVED***[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $comment = null;
 
-    ***REMOVED***[ORM\ManyToMany(targetEntity: Interest::class, mappedBy: 'feedbacks')]
+    #[ORM\ManyToMany(targetEntity: Interest::class, mappedBy: 'feedbacks')]
     private Collection $interests;
 
-    ***REMOVED***[ORM\OneToOne(inversedBy: 'feedback', targetEntity: User::class)]
-    ***REMOVED***[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id')]
+    #[ORM\OneToOne(inversedBy: 'feedback', targetEntity: User::class)]
+    #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id')]
     private ?User $user = null;
 
     public function __construct()

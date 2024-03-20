@@ -13,12 +13,12 @@
     {% endblock %}
 </head>
 <body>
-{***REMOVED***<a class="header-link" href="{{ path('home') }}">
+{#<a class="header-link" href="{{ path('home') }}">
 <header>
     <img src="https://stijl.kuleuven.be/releases/ttt/img/logo.png" alt="KU Leuven">
     <h1>Info Days</h1>
 </header>
-</a>***REMOVED***}
+</a>#}
 {% block body %}
 
     {% for flash_error in app.flashes('verify_email_error') %}

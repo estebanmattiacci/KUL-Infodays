@@ -29,7 +29,7 @@
                     <li><a href="{{ path('app_contact') }} ">Contact</a></li>
                     <li><a href="{{ path('app_feedbacks') }} ">Overview</a></li>
                     {% if is_granted('IS_AUTHENTICATED') %}
-                        {***REMOVED*** This user entered their credentials THIS session ***REMOVED***}
+                        {# This user entered their credentials THIS session #}
                         <li class="auth dropdowno">
                             <button class="dropbtn">{{ app.user.username}} <i class="bi bi-caret-down-fill"></i>  </button>
                             <div class="dropdown-content">
@@ -38,7 +38,7 @@
                             </div>
                         </li>
                     {% else %}
-                        {***REMOVED*** This is a `guest`  ***REMOVED***}
+                        {# This is a `guest`  #}
                         <li class="auth log"><a href="  {{ path('app_login') }} ">Login</a></li>
                         <li class="auth reg"><a href="  {{ path('app_register') }} ">Register </a></li>
 

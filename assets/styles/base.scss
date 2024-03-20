@@ -68,7 +68,7 @@ nav ul li a{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: ***REMOVED***f9f9f9;
+    background-color: #f9f9f9;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -84,7 +84,7 @@ nav ul li a{
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: ***REMOVED***e86262;
+    background-color: #e86262;
 }
 
 /* Show the dropdown menu on hover */
@@ -93,12 +93,12 @@ nav ul li a{
 }
 
 .log {
-    background-color: ***REMOVED***10a410;
+    background-color: #10a410;
 }
 
 footer {
     min-height: 50px;
-    background-color: ***REMOVED***656565;
+    background-color: #656565;
     text-align: center;
     color: white;
     position: absolute;
@@ -124,11 +124,11 @@ main h3 {
     font-weight: lighter;
 }
 
-***REMOVED***page-container {
+#page-container {
     position: relative;
     min-height: 100vh;
 }
 
-***REMOVED***content-wrap {
+#content-wrap {
     padding-bottom: 12.5rem;    /* Footer height */
 }

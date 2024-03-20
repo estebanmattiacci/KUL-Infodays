@@ -7,17 +7,17 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-***REMOVED***[ORM\Entity(repositoryClass: InterestsRepository::class)]
+#[ORM\Entity(repositoryClass: InterestsRepository::class)]
 class Interest
 {
-    ***REMOVED***[ORM\Id]
-    ***REMOVED***[ORM\GeneratedValue]
-    ***REMOVED***[ORM\Column]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
     private ?int $id = null;
 
-    ***REMOVED***[ORM\Column]
+    #[ORM\Column]
     private ?string $name = null;
-    ***REMOVED***[ORM\ManyToMany(targetEntity: Feedback::class, inversedBy: 'interests')]
+    #[ORM\ManyToMany(targetEntity: Feedback::class, inversedBy: 'interests')]
     private Collection $feedbacks;
 
     public function __construct()

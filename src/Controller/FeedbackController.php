@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class FeedbackController extends AbstractController
 {
-    ***REMOVED***[Route('/feedback', name: 'app_feedback')]
+    #[Route('/feedback', name: 'app_feedback')]
     public function index(Request $request,EntityManagerInterface $entityManager): Response
     {
         $this->denyAccessUnlessGranted("IS_AUTHENTICATED");

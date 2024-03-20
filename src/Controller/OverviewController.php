@@ -15,7 +15,7 @@ use Symfony\UX\Chartjs\Model\Chart;
 
 class OverviewController extends AbstractController
 {
-    ***REMOVED***[Route('/overview/feedbacks', name: 'app_feedbacks')]
+    #[Route('/overview/feedbacks', name: 'app_feedbacks')]
     public function index(EntityManagerInterface $entityManager): Response
     {
         $this->denyAccessUnlessGranted("IS_AUTHENTICATED");
@@ -34,7 +34,7 @@ class OverviewController extends AbstractController
             'feedbacks' => $feedbacks,
         ]);
     }
-    ***REMOVED***[Route('/overview/statistics', name: 'app_statistics')]
+    #[Route('/overview/statistics', name: 'app_statistics')]
     public function charts(EntityManagerInterface $entityManager, ChartBuilderInterface $chartBuilder): Response
     {
         $this->denyAccessUnlessGranted("IS_AUTHENTICATED");

@@ -8,7 +8,7 @@ body {
 }
 .register-form{
     /* register form in the middle, with a border and all elements of the form well spaced */
-    border: 1px solid ***REMOVED***ccc;
+    border: 1px solid #ccc;
     width: 500px;
     margin: 50px auto;
     padding: 50px;
@@ -19,7 +19,7 @@ body {
     justify-content: center;
     /* rounded corners, different background color */
     border-radius: 10px;
-    background-color: ***REMOVED***ffffff;
+    background-color: #ffffff;
 }
 /* how to identify a form element with the name registration_form */
 form[name=registration_form]{
@@ -48,8 +48,8 @@ form[name=registration_form] div label{
 
 .btn-primary{
     /* style the button into a primary button similar to primary buttons in bootstrap */
-    background-color: ***REMOVED***007bff;
-    color: ***REMOVED***ffffff;
+    background-color: #007bff;
+    color: #ffffff;
     /* rounded corners */
     border-radius: 5px;
     /* make button more visible by increasing size */
@@ -64,7 +64,7 @@ form[name=registration_form] div label{
 }
 
 .login-form-content{
-    border: 1px solid ***REMOVED***ccc;
+    border: 1px solid #ccc;
     width: 500px;
     margin: 50px auto;
     padding: 50px;
@@ -75,7 +75,7 @@ form[name=registration_form] div label{
     justify-content: center;
     /* rounded corners, different background color */
     border-radius: 10px;
-    background-color: ***REMOVED***ffffff;
+    background-color: #ffffff;
 }
 
 .login-form{

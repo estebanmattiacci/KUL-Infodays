@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 class BaseController extends AbstractController
 {
-    ***REMOVED***[Route('/', name: 'home')]
+    #[Route('/', name: 'home')]
     public function home(): Response
     {
         /** @var User $user */
@@ -21,7 +21,7 @@ class BaseController extends AbstractController
         return $this->render('base_template/base.html.twig');
     }
 
-    ***REMOVED***[Route('/contact', name: 'app_contact')]
+    #[Route('/contact', name: 'app_contact')]
     public function contact(): Response
     {
         return $this->render('base_template/contact.html.twig');

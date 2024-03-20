@@ -9,46 +9,46 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-***REMOVED***[ORM\Entity(repositoryClass: UserRepository::class)]
-***REMOVED***[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+#[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
-    ***REMOVED***[ORM\Id]
-    ***REMOVED***[ORM\GeneratedValue]
-    ***REMOVED***[ORM\Column]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
     private ?int $id = null;
 
-    ***REMOVED***[ORM\Column(length: 180)]
+    #[ORM\Column(length: 180)]
     private ?string $username = null;
 
-    ***REMOVED***[ORM\Column]
+    #[ORM\Column]
     private array $roles = [];
 
     /**
      * @var ?string The hashed password
      */
-    ***REMOVED***[ORM\Column]
+    #[ORM\Column]
     private ?string $password = null;
 
-    ***REMOVED***[ORM\Column(length: 180, unique: true)]
+    #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
-    ***REMOVED***[ORM\Column(type: 'boolean')]
+    #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
-    ***REMOVED***[ORM\Column(length: 180)]
+    #[ORM\Column(length: 180)]
     private ?string $firstname = null;
 
-    ***REMOVED***[ORM\Column(length: 180)]
+    #[ORM\Column(length: 180)]
     private ?string $lastname = null;
 
-    ***REMOVED***[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
 
-    ***REMOVED***[ORM\ManyToOne(targetEntity: Infoday::class, inversedBy: 'users')]
+    #[ORM\ManyToOne(targetEntity: Infoday::class, inversedBy: 'users')]
     private  Infoday $infoday;
 
-    ***REMOVED***[ORM\OneToOne(mappedBy: 'user', targetEntity: Feedback::class)]
+    #[ORM\OneToOne(mappedBy: 'user', targetEntity: Feedback::class)]
     private ?Feedback $feedback = null;
 
     public function getId(): ?int
